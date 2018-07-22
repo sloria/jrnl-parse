@@ -18,6 +18,7 @@ jobs:
   - stage: npm release
     if: tag IS present
     node_js: '8'
+    install: npm install
     before_install: true
     before_script: true
     after_script: true
