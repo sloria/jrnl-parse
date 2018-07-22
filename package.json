@@ -15,7 +15,7 @@
     "prebuild": "npm run clean",
     "prepare": "npm run build",
     "test": "npm run lint && jest",
-    "release": "np",
+    "release": "np --no-publish",
     "lint": "eslint ."
   },
   "files": [

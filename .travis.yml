@@ -3,3 +3,18 @@ cache: npm
 node_js:
 - 8
 sudo: false
+# Release to NPM when tags are pushed
+jobs:
+  include:
+  - stage: npm release
+    if: tag IS present
+    node_js: "8"
+    script: echo "Deploying to npm ..."
+    deploy:
+      provider: npm
+      email: sloria1@gmail.com
+      api_key:
+        secure: br200jQhQlEBnAGdjUdZ9QJr/jluG0W3HQj/nG0aTGoXdqW4u1BzrE4qPUDmrzWVtBDJhZMkHWboQEfoAr7HFNRQ1wXrgIt3AFNjkQsQyC5l1wNaqDlL3WbNhu4HD03yNwDhqA9+MGAiUG0zU6iOnN472YTuh4GN3kcDLKnBQq4tHC7fiDeSmFhM5dDqooBCR6qOczNoGNvxrly1PGV7T1vOnqKd2rmaD5Q6V508YLr+QcKtwZblrF3xWTBg0K18GN/B2RkIGP9xfj6CgDY/EnBF3xeFqwkUXJXnar+RFJP9z3MeDkgIfSawNFvD8axlyq7wXHkDaZEjVqghMi5FzkI2YCxDdMSG5Vqecev8LEEfaQ8kP9vBz/9oGXuDa1+qCySwMI2eoQcoJOn8zMp5953kI2EtaFMS1lqKn23vGjMLvS/6gYW8aCD2toOAoHy5P/gJqfd6cw8DR9ORDD/6QIfleSumkNU6CT9oNElsjQPAjg9zCheHqFFkcqPqe7sp9ig19Q39187V3gRopZMr2Da0XlN7tlm8UwKoOkuE6EFbGeMCyHB0/f/bF7dax80Rm+kbkqMYp0ONRiexHCKK2AGnU4MaT/mTm4h2MLWYcmH85ECuLRWmbDVtb07lPZd43KqCejjONUvPO1t2EMYc57EzRFFTwb+PRZvQcP6W4bY=
+      on:
+        tags: true
+        repo: sloria/jrnl-parse
