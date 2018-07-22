@@ -1,7 +1,7 @@
 # jrnl-parse
 
-[![Current Version](https://img.shields.io/npm/v/jrnl-parse.svg)](https://www.npmjs.org/package/jrnl-parser)
-[![Build Status](https://travis-ci.org/sloria/jrnl-parse.svg?branch=master)](https://travis-ci.org/sloria/jrnl-parser)
+[![Current Version](https://img.shields.io/npm/v/jrnl-parse.svg)](https://www.npmjs.org/package/jrnl-parse)
+[![Build Status](https://travis-ci.org/sloria/jrnl-parse.svg?branch=master)](https://travis-ci.org/sloria/jrnl-parse)
 [![Greenkeeper badge](https://badges.greenkeeper.io/sloria/jrnl-parse.svg)](https://greenkeeper.io/)
 
 Parses [jrnl](https://jrnl.sh) files in Node.js or the browser.
