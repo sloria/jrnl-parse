@@ -21,7 +21,6 @@ jobs:
     before_install: true
     before_script: true
     after_script: true
-    install: true
     script: echo "Deploying to npm ..."
     deploy:
       provider: npm
