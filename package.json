@@ -1,6 +1,6 @@
 {
   "name": "jrnl-parse",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Parses jrnl (jrnl.sh) files. Works in both Node.js and the browser.",
   "browser": "dist/jrnl-parse.js",
   "main": "lib/jrnl-parse.js",
