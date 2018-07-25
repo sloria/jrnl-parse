@@ -11,7 +11,7 @@ npm install jrnl-parse
 ```
 
 ```javascript
-import parse from "jrnl-parser";
+import parse from "jrnl-parse";
 
 const jrnl = `2023-08-21 09:01 What is jrnl?
 
