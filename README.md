@@ -62,6 +62,11 @@ console.log(JSON.stringify(result, null, 2));
 * To run tests: `npm test`
 * To run tests in watch mode: `npm test -- --watch`
 
+## Related
+
+* [jrnl-render](https://github.com/sloria/jrnl-render) - Render a jrnl
+    file as a webpage.
+
 ## License
 
 MIT Licensed.
