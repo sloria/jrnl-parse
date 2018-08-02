@@ -1,4 +1,4 @@
-import parse from "../src";
+const parse = require(".");
 
 const file = `2018-06-03 14:28 Foo bar baz
 
@@ -17,7 +17,7 @@ describe("parsing simple.txt", () => {
   it("should parse attributes", () => {
     const result = parse(file);
     expect(Array.isArray(result)).toBe(true);
-    expect(result.length).toEqual(3);
+    expect(result).toHaveLength(3);
     const entry = result[0];
     expect(entry.title).toEqual("Foo bar baz");
     expect(entry.date).toEqual(new Date("2018-06-03 14:28"));
