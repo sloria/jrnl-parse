@@ -3,16 +3,3 @@ cache: npm
 node_js:
 - 8
 sudo: false
-
-# https://github.com/greenkeeperio/greenkeeper-lockfile#example-travis-ci-configurations
-before_install:
-# package-lock.json was introduced in npm@5
-- '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest' # skipped when using node 9
-- npm install -g greenkeeper-lockfile
-install: npm install
-before_script: greenkeeper-lockfile-update
-after_script: greenkeeper-lockfile-upload
-
-env:
-  global:
-    secure: W1ZLFlIvLbbxP2QV+qZBLT/lX6o5M/x1vl5Z+Aa0/NGxrwhQ7qfDBDwmttmve9aDBtvPRxPFBcNtTKmLlLWM+bbl2ssGbAPR6Y5StzguxClZGgM+4ygJPfjskT6wMx9sAt0CSSldvXsUEfs74icoEuW+eDgxAQfuVudMKkOpQgynDUVlOSdEgbMVjmxRsAIBFrsWgRnAWHEVrSGXBBG02WhlRdjUvLw+Jhr8CsVQawuswGVI8HX8MBY8vZX54pypXDAenkGqrTw3XG3VliK2Luj4sRDQqnYxbWEAq1m2sp31KQgegZpH9jg2vBJAtcOXgp/LKS5/tpHcpPdaHMVta0V7p9PRrVoSPMV5NUb3ytM1os8qhCMH2/uT3RtevBMuNHYKJymTVBdJefOinY2xqRM2eZAfLJtPVEAxN21EAzeyIViK3UUNvsxs/kKcT6MvwzocqUr9aoZzbAY8lDdo72Im4jh4pBgPBP7jugXcbmoBcVU09G+ux0SziWqYzgcWbQ3Nbq3sISizxTN8odNAg+7xuMttAy4HmisOOOdV9Sv3ZTtOxQqZ3NhT8tUkc0Az1Gov37JKD+JxaAjar2T41r+e0Eyb/UvwUgVUy1PjR1I5/g8tt5peqQcTRDR7wphGYstnpbzqvlmQBHmF+YvMyffxpkWr38OawL6TwqH7+5c=

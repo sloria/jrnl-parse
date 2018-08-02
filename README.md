@@ -1,8 +1,8 @@
 # jrnl-parse
 
-[![Current Version](https://img.shields.io/npm/v/jrnl-parse.svg)](https://www.npmjs.org/package/jrnl-parse)
+[![Current Version](https://badgen.net/npm/v/jrnl-parse)](https://www.npmjs.org/package/jrnl-parse)
 [![Build Status](https://travis-ci.org/sloria/jrnl-parse.svg?branch=master)](https://travis-ci.org/sloria/jrnl-parse)
-[![Greenkeeper badge](https://badges.greenkeeper.io/sloria/jrnl-parse.svg)](https://greenkeeper.io/)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=sloria/jrnl-parse)](https://dependabot.com)
 
 Parses [jrnl](http://jrnl.sh) files in Node.js or the browser.
 
@@ -48,24 +48,24 @@ console.log(JSON.stringify(result, null, 2));
 
 ### `parse(input, [config])`
 
-* `input`: Input string to parse
-* `config`:
-  * `timeformat`: Format for timestamps. Default: `"YYYY-MM-DD HH:mm"`
+- `input`: Input string to parse
+- `config`:
+  - `timeformat`: Format for timestamps. Default: `"YYYY-MM-DD HH:mm"`
 
 ## TODO
 
-* [ ] Parse tags
+- [ ] Parse tags
 
 ## Developing
 
-* `npm install`
-* To run tests: `npm test`
-* To run tests in watch mode: `npm test -- --watch`
+- `npm install`
+- To run tests: `npm test`
+- To run tests in watch mode: `npm test -- --watch`
 
 ## Related
 
-* [jrnl-render](https://github.com/sloria/jrnl-render) - Render a jrnl
-    file as a webpage.
+- [jrnl-render](https://github.com/sloria/jrnl-render) - Render a jrnl
+  file as a webpage.
 
 ## License
 
