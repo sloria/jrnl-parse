@@ -7,5 +7,5 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": ["plugin:prettier/recommended", "plugin:jest/recommended"]
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:jest/recommended"]
 }
