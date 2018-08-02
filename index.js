@@ -1,6 +1,6 @@
-import formatDate from "date-fns/format";
-import parseDate from "date-fns/parse";
-import isValidDate from "date-fns/is_valid";
+const formatDate = require("date-fns/format");
+const parseDate = require("date-fns/parse");
+const isValidDate = require("date-fns/is_valid");
 
 const defaultConfig = {
   // jrnl's default timeformat (%Y-%m-%d %H:%M)
@@ -52,4 +52,4 @@ const parse = (input, config) => {
   return entries;
 };
 
-export default parse;
+module.exports = parse;

@@ -4,6 +4,8 @@
     "es6": true,
     "node": true
   },
-  "extends": ["plugin:prettier/recommended"],
-  "parser": "babel-eslint"
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": ["plugin:prettier/recommended", "plugin:jest/recommended"]
 }
