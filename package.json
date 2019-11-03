@@ -1,6 +1,6 @@
 {
   "name": "jrnl-parse",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Parses jrnl (jrnl.sh) files. Works in both Node.js and the browser.",
   "scripts": {
     "test": "npm run lint && jest",
