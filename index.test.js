@@ -1,16 +1,16 @@
 const parse = require(".");
 
-const file = `2018-06-03 14:28 Foo bar baz
+const file = `[2018-06-03 14:28] Foo bar baz
 
 not much to see here
 
 @javascript
 
-2018-07-04 02:34 Happy america day*
+[2018-07-04 02:34] Happy america day*
 
 yay usa
 
-2018-08-21 04:56 No body
+[2018-08-21 04:56] No body
 `;
 
 describe("parsing simple.txt", () => {

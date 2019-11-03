@@ -18,9 +18,11 @@ const parse = (input, config) => {
     .split("\n")
     .forEach(ln => {
       let line = ln.replace(/\s+$/, "");
+      const dateMatch = /^\[(.+)\]/.exec(line);
+      const dateString = dateMatch ? dateMatch[1] : null;
       // try to parse line as date => new entry begins
-      const newDate = parseDate(line.slice(0, dateLength), conf.timeformat);
-      if (isValidDate(newDate)) {
+      const newDate = parseDate(dateString, conf.timeformat);
+      if (dateMatch && isValidDate(newDate)) {
         // parsing successful => save old entry and create new one
         if (currentEntry) {
           entries.push(currentEntry);
@@ -33,7 +35,8 @@ const parse = (input, config) => {
         currentEntry = {
           starred,
           date: newDate,
-          title: line.slice(dateLength + 1, line.length).replace(/\n+$/, ""),
+          // Add 3 for "[", "]", and " "
+          title: line.slice(dateLength + 3, line.length).replace(/\n+$/, ""),
           body: ""
         };
       } else if (currentEntry) {
