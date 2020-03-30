@@ -29,7 +29,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^8.0.4",
     "np": "^5.0.2",
-    "prettier": "^1.13.7"
+    "prettier": "^2.0.2"
   },
   "dependencies": {
     "date-fns": "^1.29.0"
