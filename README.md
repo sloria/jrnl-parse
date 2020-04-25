@@ -24,7 +24,7 @@ Journals are stored as human readable plain text files.
 * DayOne Integration
 * Optional encryption
 
-@tag1 and @tag2
+@jrnl and @gettingstarted
 `;
 
 const result = parse(jrnl);
@@ -43,7 +43,7 @@ console.log(JSON.stringify(result, null, 2));
 //     "date": "2023-08-22T18:42:00.000Z",
 //     "title": "Some jrnl features",
 //     "body": "\n* Tagging and filtering\n* DayOne Integration\n* Optional encryption\n"
-//     "tags": ["tag1", "tag2"],
+//     "tags": ["jrnl", "gettingstarted"],
 //   }
 // ]
 ```
@@ -55,10 +55,7 @@ console.log(JSON.stringify(result, null, 2));
 - `input`: Input string to parse
 - `config`:
   - `timeformat`: Format for timestamps. Default: `"YYYY-MM-DD HH:mm"`
-
-## TODO
-
-- [ ] Parse tags
+  - `tagsymbols`: Symbols to use for tags. Default: `"@"`
 
 ## Developing
 
