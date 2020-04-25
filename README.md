@@ -23,6 +23,8 @@ Journals are stored as human readable plain text files.
 * Tagging and filtering
 * DayOne Integration
 * Optional encryption
+
+@tag1 and @tag2
 `;
 
 const result = parse(jrnl);
@@ -34,12 +36,14 @@ console.log(JSON.stringify(result, null, 2));
 //     "date": "2023-08-21T13:01:00.000Z",
 //     "title": "What is jrnl?",
 //     "body": "\njrnl is a simple journal application for your command line.\nJournals are stored as human readable plain text files.\n\n"
+//     "tags": [],
 //   },
 //   {
 //     "starred": true,
 //     "date": "2023-08-22T18:42:00.000Z",
 //     "title": "Some jrnl features",
 //     "body": "\n* Tagging and filtering\n* DayOne Integration\n* Optional encryption\n"
+//     "tags": ["tag1", "tag2"],
 //   }
 // ]
 ```

@@ -8,6 +8,11 @@ const defaultConfig = {
   tagsymbols: "@"
 };
 
+const parseTags = (input, tagsymbols) => {
+  const pattern = new RegExp(`[${tagsymbols}]{1}\\w+`, "g");
+  return (input.match(pattern) || []).map(x => x.slice(1));
+};
+
 const parse = (input, config) => {
   const entries = [];
   const conf = Object.assign({}, defaultConfig, config);
@@ -32,17 +37,23 @@ const parse = (input, config) => {
         if (starred) {
           line = line.slice(0, line.length - 1);
         }
+        const title = line
+          .slice(dateLength + 3, line.length)
+          .replace(/\n+$/, "");
+        const tags = parseTags(title, conf.tagsymbols);
         currentEntry = {
           starred,
           date: newDate,
           // Add 3 for "[", "]", and " "
-          title: line.slice(dateLength + 3, line.length).replace(/\n+$/, ""),
-          body: ""
+          title,
+          body: "",
+          tags
         };
       } else if (currentEntry) {
         // Happens when we can't parse the start of the line as an date.
         // In this case, just append line to our body.
         currentEntry.body += `${line}\n`;
+        currentEntry.tags.push(...parseTags(line, conf.tagsymbols));
       }
     });
 
@@ -50,7 +61,6 @@ const parse = (input, config) => {
   if (currentEntry) {
     entries.push(currentEntry);
   }
-  // TODO: parse tags
 
   return entries;
 };
