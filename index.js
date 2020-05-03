@@ -1,10 +1,10 @@
 const formatDate = require("date-fns/format");
 const parseDate = require("date-fns/parse");
-const isValidDate = require("date-fns/is_valid");
+const isValidDate = require("date-fns/isValid");
 
 const defaultConfig = {
   // jrnl's default timeformat (%Y-%m-%d %H:%M)
-  timeformat: "YYYY-MM-DD HH:mm",
+  timeformat: "yyyy-MM-dd HH:mm",
   tagsymbols: "@"
 };
 
@@ -13,10 +13,12 @@ const parseTags = (input, tagsymbols) => {
   return (input.match(pattern) || []).map(x => x.slice(1));
 };
 
+const referenceDate = new Date(1970, 0, 1);
+
 const parse = (input, config) => {
   const entries = [];
   const conf = Object.assign({}, defaultConfig, config);
-  const dateLength = formatDate(new Date(), conf.timeformat).length;
+  const dateLength = formatDate(referenceDate, conf.timeformat).length;
   let currentEntry = null;
   input
     .replace(/\n+$/, "")
@@ -26,7 +28,7 @@ const parse = (input, config) => {
       const dateMatch = /^\[(.+)\]/.exec(line);
       const dateString = dateMatch ? dateMatch[1] : null;
       // try to parse line as date => new entry begins
-      const newDate = parseDate(dateString, conf.timeformat);
+      const newDate = parseDate(dateString, conf.timeformat, referenceDate);
       if (dateMatch && isValidDate(newDate)) {
         // parsing successful => save old entry and create new one
         if (currentEntry) {
