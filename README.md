@@ -1,7 +1,7 @@
 # jrnl-parse
 
 [![Current Version](https://badgen.net/npm/v/jrnl-parse)](https://www.npmjs.org/package/jrnl-parse)
-[![Build Status](https://travis-ci.org/sloria/jrnl-parse.svg?branch=master)](https://travis-ci.org/sloria/jrnl-parse)
+![CI](https://github.com/sloria/jrnl-parse/workflows/CI/badge.svg)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=sloria/jrnl-parse)](https://dependabot.com)
 
 Parses [jrnl](http://jrnl.sh) files in Node.js or the browser.
