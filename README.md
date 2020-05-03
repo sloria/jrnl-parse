@@ -54,7 +54,7 @@ console.log(JSON.stringify(result, null, 2));
 
 - `input`: Input string to parse
 - `config`:
-  - `timeformat`: Format for timestamps. Default: `"YYYY-MM-DD HH:mm"`
+  - `timeformat`: Format for timestamps. Default: `"yyyy-MM-dd HH:mm"`
   - `tagsymbols`: Symbols to use for tags. Default: `"@"`
 
 ## Developing
